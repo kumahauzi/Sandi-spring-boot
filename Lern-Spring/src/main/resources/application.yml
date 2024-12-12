@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://aws-0-ap-southeast-1.pooler.supabase.com:6543/postgres
+    username: postgres.kdcceaogrkrbcprkkhhh
+    password: Sandivanbiana@23
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 10
+      idle-timeout: 30000
+      max-lifetime: 60000
+      connection-timeout: 30000
+      validation-timeout: 5000
+
+  logging:
+    level:
+      org.hibernate: DEBUG
+      com.zaxxer.hikari: DEBUG
+jpa:
+database-platform: org.hibernate.dialect.PostgreSQLDialect
+hibernate:
+  ddl-auto: update
+sql:
+  init:
+    mode: always
+
+server:
+  port: 1010
+
+thymeleaf:
+  prefix: classpath:/templates/
+  suffix: .html
